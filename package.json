@@ -1,0 +1,19 @@
+{
+  "name": "@checksum/elm-flatris",
+  "description": "Fork of w0rm/elm-flatris with collaborative gameplay",
+  "private": true,
+  "scripts": {
+    "start": "parcel src/index.html",
+    "prebuild": "rm -rf dist",
+    "build": "parcel build --no-source-maps src/index.html"
+  },
+  "dependencies": {
+    "peerjs": "^1.2.0"
+  },
+  "devDependencies": {
+    "elm-hot": "^1.1.4",
+    "elm-outdated": "^1.1.1",
+    "node-elm-compiler": "^5.0.4",
+    "parcel": "^1.12.4"
+  }
+}

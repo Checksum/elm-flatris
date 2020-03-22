@@ -4,7 +4,6 @@ import Grid
 import Messages exposing (..)
 import Model exposing (..)
 
-
 port save : String -> Cmd msg
 
 
