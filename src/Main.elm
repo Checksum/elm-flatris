@@ -1,4 +1,4 @@
-module Main exposing (main)
+port module Main exposing (main)
 
 import Browser
 import Browser.Dom exposing (getViewport)
@@ -12,6 +12,7 @@ import Task
 import Update
 import View
 
+port incoming : (Decode.Value -> msg) -> Sub msg
 
 main : Program Value Model Msg
 main =
@@ -40,6 +41,7 @@ subscriptions model =
         , onKeyUp (Decode.map (key False) keyCode)
         , onKeyDown (Decode.map (key True) keyCode)
         , onResize Resize
+        , incoming IncomingMessage
         ]
 
 

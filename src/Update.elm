@@ -83,7 +83,7 @@ update msg model =
                 |> animate (min time 25)
                 |> saveToStorage
 
-        Noop ->
+        _ ->
             ( model, Cmd.none )
 
 

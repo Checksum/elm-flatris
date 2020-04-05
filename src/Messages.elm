@@ -1,6 +1,7 @@
 module Messages exposing (Msg(..))
 
 import Browser.Dom exposing (Viewport)
+import Json.Decode as Decode
 
 
 type Msg
@@ -16,3 +17,4 @@ type Msg
     | Resize Int Int
     | GetViewport Viewport
     | Noop
+    | IncomingMessage Decode.Value
